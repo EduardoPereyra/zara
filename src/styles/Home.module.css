@@ -1,10 +1,12 @@
 .homeContainer {
-  margin: 10px 50px 100px;
+  padding: 10px 50px 100px;
+  background-color: white;
 }
 
 .logo {
-  font-size: 4em;
+  font-size: 4.5em;
   font-family: "Didot";
+  color: black;
 }
 
 .zoomButtons {
@@ -14,8 +16,28 @@
 }
 
 .zoomButtons button {
-  margin-left: 10px;
-  padding: 2px 4px;
+  margin-left: 2px;
+  padding: 10px 20px;
+  background-color: #383838;
+  cursor: pointer;
+  border: none;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 140px;
+}
+
+.zoomButtons button img {
+  filter: invert(1);
+}
+
+.zoomButtons button:first-child {
+  border-radius: 24px 0 0 24px;
+}
+
+.zoomButtons button:last-child {
+  border-radius: 0 24px 24px 0;
 }
 
 .zoomContainer {

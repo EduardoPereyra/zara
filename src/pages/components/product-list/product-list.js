@@ -6,10 +6,11 @@ import styles from "./product-list.module.css";
 const grid = 8;
 
 const getWrapperStyle = (isDraggingOver, align) => ({
-  backgroundColor: isDraggingOver ? "lightgreen" : "grey",
+  backgroundColor: isDraggingOver ? "#D2D2D2" : "#F5F5F5",
   padding: `${grid}px`,
   alignItems: getAlign(align),
   margin: `${grid}px 0`,
+  borderRadius: "12px",
 });
 
 const getAlign = (align) => {
@@ -31,19 +32,19 @@ export default function ProductList(props) {
             className={align === "left" ? styles.buttonSelected : ""}
             onClick={() => props.modifyAlignment(listId, "left")}
           >
-            left
+            Left
           </button>
           <button
             className={align === "center" ? styles.buttonSelected : ""}
             onClick={() => props.modifyAlignment(listId, "center")}
           >
-            center
+            Center
           </button>
           <button
             className={align === "right" ? styles.buttonSelected : ""}
             onClick={() => props.modifyAlignment(listId, "right")}
           >
-            right
+            Right
           </button>
         </div>
         <div className={styles.container}>

@@ -1,16 +1,17 @@
 .buttonsContainer {
   display: flex;
+  justify-content: flex-end;
+}
+
+.buttonsContainer button {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  filter: invert(1);
+  border: none;
+  cursor: pointer;
 }
 
 .addButton {
-  padding: 10px 20px;
-  font-size: 1.25rem;
-  cursor: pointer;
-}
-
-.saveButton {
-  padding: 5px;
-  margin: 0 20px;
-  filter: invert(1);
-  cursor: pointer;
+  margin-right: 10px;
 }

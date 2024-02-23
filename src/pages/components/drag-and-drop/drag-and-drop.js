@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { DragDropContext } from "@hello-pangea/dnd";
 import ProductList from "../product-list/product-list";
 import {
-  reorderProductMap,
+  reorderProductMapProducts,
   reorderProductMapList,
 } from "../../utilities/reorder";
 import styles from "./drag-and-drop.module.css";
@@ -31,8 +31,8 @@ export default function DragAndDrop() {
         try {
           const products = await getProducts(searchIdsString);
           const initialProductMapData = products.data.map((product, index) => ({
-            products: [product], // Assuming each product is in its own group initially
-            align: "left", // You can set the default alignment as needed
+            products: [product],
+            align: "left",
             id: `G-${index}`,
           }));
           setProductMap(initialProductMapData);
@@ -87,13 +87,12 @@ export default function DragAndDrop() {
   };
 
   const onDragEnd = (result) => {
-    // Dropped outside the list
     if (!result.destination) {
       return;
     }
 
     if (result.type === "CARD") {
-      const reorderedProductMap = reorderProductMap(
+      const reorderedProductMap = reorderProductMapProducts(
         productMap,
         result.source,
         result.destination
@@ -111,6 +110,7 @@ export default function DragAndDrop() {
   };
 
   const changeBackup = () => {
+    removeEmpty();
     backup
       ? localStorage.removeItem("productMap")
       : localStorage.setItem("productMap", JSON.stringify(productMap));
@@ -141,25 +141,30 @@ export default function DragAndDrop() {
             {dropProvided.placeholder}
             <div className={styles.buttonsContainer}>
               <button className={styles.addButton} onClick={add}>
-                Add
+                <Image
+                  src='/images/plus.png'
+                  alt='Save'
+                  width={24}
+                  height={24}
+                />
               </button>
               {!backup && (
                 <button className={styles.saveButton} onClick={changeBackup}>
                   <Image
                     src='/images/save.png'
                     alt='Save'
-                    width={32}
-                    height={32}
+                    width={24}
+                    height={24}
                   />
                 </button>
               )}
               {backup && (
                 <button className={styles.saveButton} onClick={changeBackup}>
                   <Image
-                    src='/images/delete.png'
+                    src='/images/save-fill.png'
                     alt='Delete'
-                    width={32}
-                    height={32}
+                    width={24}
+                    height={24}
                   />
                 </button>
               )}

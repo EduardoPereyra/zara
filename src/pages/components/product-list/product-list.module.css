@@ -30,11 +30,15 @@
 }
 
 .alignButtonsContainer button {
-  padding: 5px 10px;
+  padding: 10px 20px;
   margin: 0 2px;
   cursor: pointer;
+  background-color: #7f7f7f;
+  border-radius: 16px;
+  border: none;
+  font-size: 16px;
 }
 
 .buttonSelected {
-  border: 2px solid white;
+  background-color: #383838 !important;
 }

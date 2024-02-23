@@ -7,25 +7,18 @@ export function reorder(list, startIndex, endIndex) {
   return result;
 }
 
-export default reorder;
-
-export function reorderProductMap(productMap, source, destination) {
+export function reorderProductMapProducts(productMap, source, destination) {
   const newProductMapList = [...productMap];
-  // Find the source and destination groups
   const sourceGroup = newProductMapList.find(
     (group) => group.id === source.droppableId
   );
   const destinationGroup = newProductMapList.find(
     (group) => group.id === destination.droppableId
   );
-  // Check if the destination group already has the maximum allowed items (in this case, 3)
   if (destinationGroup.products.length >= 3) {
-    return newProductMapList; // Return the original list without making any changes
+    return newProductMapList;
   }
-  // Remove the product from the source group
   const [movedProduct] = sourceGroup.products.splice(source.index, 1);
-
-  // Insert the product into the destination group at the specified index
   destinationGroup.products.splice(destination.index, 0, movedProduct);
 
   return newProductMapList;

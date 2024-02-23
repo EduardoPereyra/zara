@@ -20,9 +20,11 @@ export default function ProductItem({ product, provided }) {
       {...provided.draggableProps}
       {...provided.dragHandleProps}
     >
-      <Image src={product.img} alt={product.name} width={80} height={80} />
-      <h1>{product.name}</h1>
-      <p>{product.price}</p>
+      <Image src={product.img} alt={product.name} width={120} height={120} />
+      <div className={styles.productInfo}>
+        <h1>{product.name}</h1>
+        <p>{product.price}</p>
+      </div>
     </div>
   );
 }
