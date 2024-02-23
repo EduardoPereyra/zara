@@ -1,0 +1,16 @@
+.buttonsContainer {
+  display: flex;
+}
+
+.addButton {
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.saveButton {
+  padding: 5px;
+  margin: 0 20px;
+  filter: invert(1);
+  cursor: pointer;
+}

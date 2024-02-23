@@ -1,0 +1,40 @@
+.dropZone {
+  display: flex;
+  align-items: start;
+  min-width: 600px;
+  width: 100%;
+  min-height: 60px;
+  margin-top: 10px;
+}
+
+.wrapperStyle {
+  display: "flex";
+  flex-direction: "column";
+  user-select: "none";
+}
+
+.scrollContainer {
+  overflow: auto;
+  width: 100%;
+}
+
+.container {
+  flex-grow: 1;
+  display: inline-flex;
+  width: 100%;
+}
+
+.alignButtonsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.alignButtonsContainer button {
+  padding: 5px 10px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.buttonSelected {
+  border: 2px solid white;
+}
