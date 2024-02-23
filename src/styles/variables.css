@@ -1,0 +1,35 @@
+:root {
+  --main-background: white;
+  --main-button-background: #383838;
+  --secondary-button-background: #7f7f7f;
+  --secondary-button-selected: #383838;
+  --main-font-color: #242424;
+  --border: #c7c7c7;
+
+  /* spacings */
+  --space-base: 0.25rem;
+  --space-1x: var(--space-base);
+  --space-2x: calc(var(--space-base) * 2);
+  --space-3x: calc(var(--space-base) * 3);
+  --space-4x: calc(var(--space-base) * 4);
+  --space-5x: calc(var(--space-base) * 5);
+  --space-6x: calc(var(--space-base) * 6);
+  --space-7x: calc(var(--space-base) * 7);
+  --space-8x: calc(var(--space-base) * 8);
+  --space-10x: calc(var(--space-base) * 10);
+  --space-12x: calc(var(--space-base) * 12);
+  --space-16x: calc(var(--space-base) * 16);
+  --space-24x: calc(var(--space-base) * 24);
+  --space-32x: calc(var(--space-base) * 32);
+
+  /* font sizes */
+  --fs-xx-small: 0.6rem;
+  --fs-x-small: 0.7rem;
+  --fs-small: 0.75rem;
+  --fs-medium: 1rem;
+  --fs-large: 1.25rem;
+  --fs-x-large: 1.5rem;
+  --fs-xx-large: 2rem;
+  --fs-xxx-large: 3rem;
+  --fs-jumbo: 4rem;
+}

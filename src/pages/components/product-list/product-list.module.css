@@ -1,10 +1,10 @@
 .dropZone {
   display: flex;
   align-items: start;
-  min-width: 600px;
+  min-width: calc(var(--space-4x) * 15);
   width: 100%;
-  min-height: 60px;
-  margin-top: 10px;
+  min-height: var(--space-16x);
+  margin-top: var(--space-3x);
 }
 
 .wrapperStyle {
@@ -30,15 +30,15 @@
 }
 
 .alignButtonsContainer button {
-  padding: 10px 20px;
+  padding: var(--space-3x) var(--space-5x);
   margin: 0 2px;
   cursor: pointer;
-  background-color: #7f7f7f;
-  border-radius: 16px;
+  background-color: var(--secondary-button-background);
+  border-radius: var(--space-4x);
   border: none;
-  font-size: 16px;
+  font-size: var(--fs-medium);
 }
 
 .buttonSelected {
-  background-color: #383838 !important;
+  background-color: var(--secondary-button-selected) !important;
 }

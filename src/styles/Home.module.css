@@ -1,31 +1,32 @@
 .homeContainer {
-  padding: 10px 50px 100px;
-  background-color: white;
+  padding: var(--space-3x) calc(var(--space-12x) + var(--space-2x))
+    var(--space-24x);
+  background-color: var(--main-background);
 }
 
 .logo {
-  font-size: 4.5em;
+  font-size: calc(var(--fs-jumbo) + var(--fs-xx-small));
   font-family: "Didot";
   color: black;
 }
 
 .zoomButtons {
-  margin-bottom: 10px;
+  margin-bottom: var(--space-3x);
   display: flex;
   justify-content: flex-end;
 }
 
 .zoomButtons button {
   margin-left: 2px;
-  padding: 10px 20px;
-  background-color: #383838;
+  padding: var(--space-3x) var(--space-5x);
+  background-color: var(--secondary-button-selected);
   cursor: pointer;
   border: none;
-  font-size: 0.9em;
+  font-size: var(--fs-medium);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 140px;
+  min-width: calc(var(--space-32x) + var(--space-3x));
 }
 
 .zoomButtons button img {
@@ -33,11 +34,11 @@
 }
 
 .zoomButtons button:first-child {
-  border-radius: 24px 0 0 24px;
+  border-radius: var(--space-6x) 0 0 var(--space-6x);
 }
 
 .zoomButtons button:last-child {
-  border-radius: 0 24px 24px 0;
+  border-radius: 0 var(--space-6x) var(--space-6x) 0;
 }
 
 .zoomContainer {
